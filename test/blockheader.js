@@ -1,9 +1,7 @@
-'use strict';
-
+var Blockheader = require('../lib/blockheader');
+var BufferWriter = require('../lib/bufferwriter');
+var BufferReader = require('../lib/bufferreader');
 var should = require('chai').should();
-var bitcore = require('..');
-var Blockheader = bitcore.Blockheader;
-var BufferReader = bitcore.BufferReader;
 
 describe('Blockheader', function() {
   
@@ -24,8 +22,8 @@ describe('Blockheader', function() {
     bits: bits,
     nonce: nonce
   });
-  var bhhex = '0100000005050505050505050505050505050505050505050505050505050505050505050909090909090909090909090909090909090909090909090909090909090909020000000300000004000000';
-  var bhbuf = new Buffer(bhhex, 'hex');
+  bhhex = '0100000005050505050505050505050505050505050505050505050505050505050505050909090909090909090909090909090909090909090909090909090909090909020000000300000004000000';
+  bhbuf = new Buffer(bhhex, 'hex');
 
   it('should make a new blockheader', function() {
     var blockheader = new Blockheader();

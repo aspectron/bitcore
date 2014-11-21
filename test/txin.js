@@ -1,11 +1,8 @@
-'use strict';
-
 var should = require('chai').should();
-var bitcore = require('..');
-var Script = bitcore.Script;
-var Txin = bitcore.Txin;
-var Varint = bitcore.Varint;
-var BufferReader = bitcore.BufferReader;
+var Script = require('../lib/script');
+var Txin = require('../lib/txin');
+var Varint = require('../lib/varint');
+var BufferReader = require('../lib/bufferreader');
 
 describe('Txin', function() {
   

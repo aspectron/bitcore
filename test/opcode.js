@@ -1,14 +1,10 @@
-'use strict';
-
 var should = require('chai').should();
-var bitcore = require('..');
-var Opcode = bitcore.Opcode;
+var Opcode = require('../lib/opcode');
 
 describe('Opcode', function() {
 
   it('should create a new Opcode', function() {
     var opcode = new Opcode(5);
-    should.exist(opcode);
   });
   
   it('should convert to a string with this handy syntax', function() {
