@@ -8,8 +8,8 @@ var run = function() {
 
   var config = {
     protocol: 'http',
-    user: 'ltc',
-    pass: 'q1w2e3r4',
+    user: 'user',
+    pass: 'password',
     host: '127.0.0.1',
     port: '9332',
   };
