@@ -10,7 +10,8 @@ var run = function() {
   var Address = bitcore.Address;
   var util = bitcore.util;
   var opts = {
-    network: networks['ltc'].livenet
+    network: networks['ltc'].livenet,
+    litecoin : true
   };
 
   var p = console.log;

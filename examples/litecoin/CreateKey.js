@@ -9,7 +9,8 @@ var run = function() {
   var WalletKey = bitcore.WalletKey;
 
   var opts = {
-    network: networks['ltc'].livenet
+    network: networks['ltc'].livenet,
+    litecoin : true
   };
 
   //console.log(opts)
