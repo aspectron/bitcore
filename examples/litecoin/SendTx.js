@@ -10,12 +10,12 @@ var run = function() {
 
   // Unspent transactions can be found via the http://ltc.block-explorer.com/ or http://explorer.litecoin.net/
   var unspent = [{
-      'txid': 'ee1db3d2ef4d66f83398edf0e4fd58b534f7526871f026f33f10459bc7615679',
-      'vout': 0,
+       txid: "3cdc95128d8b3aba6f031ca1abf7b7f8559147c400d3d456ad2bc50dfd194670",
+      'vout': 1,
       'address': 'LUU1SKQi54iSvVyB443WFz5oqG1DRhzUkG',
       'scriptPubKey': '76a91465619af066dc11eb1a4fbe9e7a1c0e17dcdbe9c788ac',
-      'amount': 0.00900000,
-      'confirmations': 6
+      amount:  0.00790000,
+      confirmations: 567
     }
   ];
 
