@@ -10,26 +10,24 @@ var run = function() {
   console.log('## Network: ' + opts.network.name);
 
   var input = {};
-  input.addr = "n2hoFVbPrYQf7RJwiRy1tkbuPPqyhAEfbp";
-  input.priv = "cS62Ej4SobZnpFQYN1PEEBr2KWf5sgRYYnELtumcG6WVCfxno39V";
+  input.addr = "LUU1SKQi54iSvVyB443WFz5oqG1DRhzUkG";
+  input.priv = "L3pKAvveaVyJTZKRkkNvS7mg5WTteP7HBn2aXH9stMcWir28v6rb";
 
   // Complete with the corresponding UTXO you want to use
   var utxos = [{
     address: input.addr,
-    txid: "39c71ebda371f75f4b854a720eaf9898b237facf3c2b101b58cd4383a44a6adc",
+    txid: "8f8dacda3d0eee31cb339eb3c918c979d1e3d1475274be73ee6714cc60e47aac",
     vout: 1,
-    ts: 1396288753,
-    scriptPubKey: "76a914e867aad8bd361f57c50adc37a0c018692b5b0c9a88ac",
-    amount: 0.4296,
+    //ts: 1396288753,
+    scriptPubKey: "76a91465619af066dc11eb1a4fbe9e7a1c0e17dcdbe9c788ac",
+    amount: 0.00500000,
     confirmations: 2
   }];
 
   var privs = [
-    "cP6JBHuQf7yqeqtdKRd22ibF3VehDv7G6BdzxSNABgrv3jFJUGoN",
-    "cQfRwF7XLSM5xGUpF8PZvob2MZyULvZPA2j5cat2RKDJrja7FtCZ",
-    "cUkYub4jtFVYymHh38yMMW36nJB4pXG5Pzd5QjResq79kAndkJcg",
-    "cMyBgowsyrJRufoKWob73rMQB1PBqDdwFt8z4TJ6APN2HkmX1Ttm",
-    "cN9yZCom6hAZpHtCp8ovE1zFa7RqDf3Cr4W6AwH2tp59Jjh9JcXu",
+    "L46ZG4Zd3REpV9bRZHhudnzYWUPP5f1ThZKXnRBaaqmfe24tRypJ",
+    "L5jWb6GosRkBkbkmncZkQzrsKoByeu8nmc8fzLE8WYam3v9RKh8f",
+    "L1oh7uu5JMwTjAtrxCxk1GjWPAvevZ74Fe14aUf1wDeQP9tZUDj2",
   ];
 
   var pubkeys = []
@@ -43,9 +41,9 @@ var run = function() {
 
 
   var outs = [{
-    nreq: 3,
+    nreq: 2,
     pubkeys: pubkeys,
-    amount: 0.05
+    amount: 0.004
   }];
   var tx = new Builder(opts)
     .setUnspent(utxos)
@@ -54,17 +52,17 @@ var run = function() {
     .build();
   var txHex = tx.serialize().toString('hex');
   console.log('1) SEND TO MULSISIG TX: ', txHex);
-  console.log('[this example originally generated TXID: e4bc22d8c519d3cf848d710619f8480be56176a4a6548dfbe865ab3886b578b5 on testnet]\n\n\thttp://test.bitcore.io/tx/e4bc22d8c519d3cf848d710619f8480be56176a4a6548dfbe865ab3886b578b5\n\n');
+ 
 
 
   //save scriptPubKey
-  var scriptPubKey = tx.outs[0].s.toString('hex');
+  //var scriptPubKey = tx.outs[0].s.toString('hex');
 
   /* 
    *
    * REDDEEM TX
    */
-  var utxos2 = [{
+  /*var utxos2 = [{
     address: input.addr,
     txid: "e4bc22d8c519d3cf848d710619f8480be56176a4a6548dfbe865ab3886b578b5",
     vout: 0,
@@ -92,7 +90,7 @@ var run = function() {
   console.log('=> Is signed status:', b.isFullySigned(), tx.countInputMissingSignatures(0));
 
   console.log('[this example originally generated TXID: 1eb388977b2de99562eb0fbcc661a100eaffed99c53bfcfebe5a087002039b83 on testnet]\n\n\thttp://test.bitcore.io/tx/1eb388977b2de99562eb0fbcc661a100eaffed99c53bfcfebe5a087002039b83');
-
+  */
 };
 
 // This is just for browser & mocha compatibility

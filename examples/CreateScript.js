@@ -10,7 +10,7 @@ var run = function() {
   var Address = bitcore.Address;
   var util = bitcore.util;
   var opts = {
-    network: networks.testnet
+    network: networks.livenet
   };
 
   var p = console.log;

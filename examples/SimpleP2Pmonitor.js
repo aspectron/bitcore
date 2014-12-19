@@ -12,7 +12,7 @@ var bitcore = require('../');
 var Peer = bitcore.Peer,
   Connection = bitcore.Connection;
 
-var peer = new Peer('127.0.0.1', 8333);
+var peer = new Peer('127.0.0.1', 9333);
 
 var socket = peer.createConnection();
 

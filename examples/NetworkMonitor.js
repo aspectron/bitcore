@@ -6,9 +6,9 @@ var run = function() {
   var NetworkMonitor = bitcore.NetworkMonitor;
 
   var config = {
-    networkName: 'testnet',
+    networkName: 'livenet',
     host: 'localhost',
-    port: 18333
+    port: 9333
   };
 
 
@@ -17,6 +17,12 @@ var run = function() {
   nm.incoming('msj42CCGruhRsFrGATiUuh25dtxYtnpbTx', function(tx) {
     console.log('Donation to tpfaucet! '+JSON.stringify(tx.getStandardizedObject()));
   });
+
+  // transaction record
+  nm.on('tx',function(info){
+    console.log("---------------------")
+    console.log(info)
+  })
 
   // connect to bitcoin network and start listening
   nm.start();
